@@ -6,7 +6,7 @@
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/vscode-extension-api)](https://circleci.com/gh/idleberg/vscode-extension-api)
 [![David](https://flat.badgen.net/david/dep/idleberg/vscode-extension-api)](https://david-dm.org/idleberg/vscode-extension-api)
 
-A simple helper aimed at externsion developers. Logs Extension API results to the output channel.
+A simple helper aimed at extension developers. Logs Extension API results to the output channel.
 
 ## Installation
 
