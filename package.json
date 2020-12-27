@@ -20,7 +20,7 @@
         "postinstall": "node ./node_modules/vscode/bin/install",
         "start": "rollup --watch --config",
         "test": "npm run lint",
-        "vscode:prepublish": "npm run build && gulp"
+        "vscode:prepublish": "npm run build"
     },
     "keywords": [],
     "repository": {
