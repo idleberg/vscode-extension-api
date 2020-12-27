@@ -1,0 +1,257 @@
+{
+    "name": "extension-api",
+    "displayName": "Extension API",
+    "description": "Logs Extension API results to the output channel",
+    "version": "0.0.0",
+    "publisher": "idleberg",
+    "license": "MIT",
+    "author": {
+        "name": "Jan T. Sott",
+        "url": "http://github.com/idleberg"
+    },
+    "scripts": {
+        "compile": "npm run build",
+        "build": "rollup --config",
+        "dev": "npm run start",
+        "fix": "eslint --fix ./src",
+        "lint:json": "jsonlint --quiet ./*.json",
+        "lint:ts": "eslint ./src",
+        "lint": "npm-run-all  --parallel lint:*",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "start": "rollup --watch --config",
+        "test": "npm run lint",
+        "vscode:prepublish": "npm run build && gulp"
+    },
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/idleberg/vscode-extension-api"
+    },
+    "homepage": "https://github.com/idleberg/vscode-extension-api#readme",
+    "bugs": {
+        "url": "https://github.com/idleberg/vscode-extension-api/issues"
+    },
+    "main": "./lib/extension",
+    "dependencies": {
+        "dot-prop": "^6.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/register": "^7.12.10",
+        "@rollup/plugin-commonjs": "^17.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^11.0.1",
+        "@rollup/plugin-typescript": "^8.1.0",
+        "@types/node": "^14.14.16",
+        "@types/vscode": "^1.52.0",
+        "@typescript-eslint/eslint-plugin": "^4.11.0",
+        "@typescript-eslint/parser": "^4.11.0",
+        "eslint": "^7.16.0",
+        "eslint-plugin-json": "^2.1.2",
+        "husky": "^4.3.6",
+        "jsonlint": "^1.6.3",
+        "lint-staged": "^10.5.3",
+        "npm-run-all": "^4.1.5",
+        "rollup": "^2.35.1",
+        "rollup-plugin-filesize": "^9.1.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "typescript": "^4.1.3",
+        "vscode": "^1.1.37"
+    },
+    "extensionDependencies": [],
+    "icon": "",
+    "galleryBanner": {},
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [],
+    "activationEvents": [
+        "*"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.extension-api.workspace.fs",
+                "title": "Extension API: workspace.fs()"
+            },
+            {
+                "command": "extension.extension-api.workspace.name",
+                "title": "Extension API: workspace.name()"
+            },
+            {
+                "command": "extension.extension-api.workspace.textDocuments",
+                "title": "Extension API: workspace.textDocuments()"
+            },
+            {
+                "command": "extension.extension-api.workspace.workspaceFile",
+                "title": "Extension API: workspace.workspaceFile()"
+            },
+            {
+                "command": "extension.extension-api.workspace.workspaceFolders",
+                "title": "Extension API: workspace.workspaceFolders()"
+            },
+            {
+                "command": "extension.extension-api.workspace.getWorkspaceFolder",
+                "title": "Extension API: workspace.getWorkspaceFolder()"
+            },
+            {
+                "command": "extension.extension-api.commands.getCommands",
+                "title": "Extension API: commands.getCommands()"
+            },
+            {
+                "command": "extension.extension-api.configuration.getConfiguration",
+                "title": "Extension API: configuration.getConfiguration()"
+            },
+            {
+                "command": "extension.extension-api.env",
+                "title": "Extension API: env"
+            },
+            {
+                "command": "extension.extension-api.env.appName",
+                "title": "Extension API: env.appName"
+            },
+            {
+                "command": "extension.extension-api.env.appRoot",
+                "title": "Extension API: env.appRoot"
+            },
+            {
+                "command": "extension.extension-api.env.clipboard",
+                "title": "Extension API: env.clipboard"
+            },
+            {
+                "command": "extension.extension-api.env.language",
+                "title": "Extension API: env.language"
+            },
+            {
+                "command": "extension.extension-api.env.machineId",
+                "title": "Extension API: env.machineId"
+            },
+            {
+                "command": "extension.extension-api.env.remoteName",
+                "title": "Extension API: env.remoteName"
+            },
+            {
+                "command": "extension.extension-api.env.sessionId",
+                "title": "Extension API: env.sessionId"
+            },
+            {
+                "command": "extension.extension-api.env.shell",
+                "title": "Extension API: env.shell"
+            },
+            {
+                "command": "extension.extension-api.env.uiKind",
+                "title": "Extension API: env.uiKind"
+            },
+            {
+                "command": "extension.extension-api.env.uriScheme",
+                "title": "Extension API: env.uriScheme"
+            },
+            {
+                "command": "extension.extension-api.extensions.all",
+                "title": "Extension API: extensions.all"
+            },
+            {
+                "command": "extension.extension-api.extensions.getExtension",
+                "title": "Extension API: extensions.getExtension()"
+            },
+            {
+                "command": "extension.extension-api.debug.activeDebugConsole",
+                "title": "Extension API: debug.activeDebugConsole"
+            },
+            {
+                "command": "extension.extension-api.debug.activeDebugSession",
+                "title": "Extension API: debug.activeDebugSession"
+            },
+            {
+                "command": "extension.extension-api.debug.breakpoints",
+                "title": "Extension API: debug.breakpoints"
+            },
+            {
+                "command": "extension.extension-api.tasks.taskExecutions",
+                "title": "Extension API: tasks.taskExecutions"
+            },
+            {
+                "command": "extension.extension-api.tasks.fetchTasks",
+                "title": "Extension API: tasks.fetchTasks()"
+            },
+            {
+                "command": "extension.extension-api.window.activeColorTheme",
+                "title": "Extension API: window.activeColorTheme"
+            },
+            {
+                "command": "extension.extension-api.window.activeTerminal",
+                "title": "Extension API: window.activeTerminal"
+            },
+            {
+                "command": "extension.extension-api.window.activeTextEditor",
+                "title": "Extension API: window.activeTextEditor"
+            },
+            {
+                "command": "extension.extension-api.window.state",
+                "title": "Extension API: window.state"
+            },
+            {
+                "command": "extension.extension-api.window.terminals",
+                "title": "Extension API: window.terminals"
+            },
+            {
+                "command": "extension.extension-api.window.visibleTextEditors",
+                "title": "Extension API: window.visibleTextEditors"
+            },
+            {
+                "command": "extension.extension-api.window.setStatusBarMessage",
+                "title": "Extension API: window.setStatusBarMessage()"
+            },
+            {
+                "command": "extension.extension-api.window.showErrorMessage",
+                "title": "Extension API: window.showErrorMessage()"
+            },
+            {
+                "command": "extension.extension-api.window.showInformationMessage",
+                "title": "Extension API: window.showInformationMessage()"
+            },
+            {
+                "command": "extension.extension-api.window.showInputBox",
+                "title": "Extension API: window.showInputBox()"
+            },
+            {
+                "command": "extension.extension-api.window.showOpenDialog",
+                "title": "Extension API: window.showOpenDialog()"
+            },
+            {
+                "command": "extension.extension-api.window.showQuickPick",
+                "title": "Extension API: window.showQuickPick()"
+            },
+            {
+                "command": "extension.extension-api.window.showSaveDialog",
+                "title": "Extension API: window.showSaveDialog()"
+            },
+            {
+                "command": "extension.extension-api.window.showWarningMessage",
+                "title": "Extension API: window.showWarningMessage()"
+            },
+            {
+                "command": "extension.extension-api.window.showWorkspaceFolderPick",
+                "title": "Extension API: window.showWorkspaceFolderPick()"
+            },
+            {
+                "command": "extension.extension-api.workspace.openTextDocument",
+                "title": "Extension API: workspace.openTextDocument()"
+            },
+            {
+                "command": "extension.extension-api.workspace.saveAll",
+                "title": "Extension API: workspace.saveAll()"
+            }
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.ts": "eslint --cache --fix",
+        "*.json": "jsonlint --quiet"
+    }
+}
