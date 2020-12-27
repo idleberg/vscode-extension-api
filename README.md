@@ -27,7 +27,7 @@ With [shell commands](https://code.visualstudio.com/docs/editor/command-line) in
 Download the packaged extension from the the [release page](https://github.com/idleberg/vscode-extension-api/releases) and install it from the command-line:
 
 ```bash
-$ code --install-extension path/to/nsis-*.vsix
+$ code --install-extension path/to/*.vsix
 ```
 
 Alternatively, you can download the packaged extension from the [Open VSX Registry](https://open-vsx.org/) or install it using the [`ovsx`](https://www.npmjs.com/package/ovsx) command-line tool:
