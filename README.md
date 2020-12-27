@@ -1,12 +1,10 @@
 # Extension API
 
 [![The MIT License](https://flat.badgen.net/badge/license/MIT/orange)](http://opensource.org/licenses/MIT)
-[![GNU General Public License](https://flat.badgen.net/badge/license/GPL%20v2/orange)](http://www.gnu.org/licenses/gpl-2.0.html)
 [![GitHub](https://flat.badgen.net/github/release/idleberg/vscode-extension-api)](https://github.com/idleberg/vscode-extension-api/releases)
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/idleberg.extension-api.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=idleberg.extension-api)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/vscode-extension-api)](https://circleci.com/gh/idleberg/vscode-extension-api)
 [![David](https://flat.badgen.net/david/dep/idleberg/vscode-extension-api)](https://david-dm.org/idleberg/vscode-extension-api)
-[![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/vscode)
 
 A simple helper aimed at externsion developers. Logs Extension API results to the output channel.
 
