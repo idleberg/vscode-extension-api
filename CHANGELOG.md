@@ -1,3 +1,8 @@
+# v0.1.2 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/0.1.2)
+
+- catch aborted input action
+- update dependencies
+
 # v0.1.1 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/0.1.1)
 
 - fix typo
