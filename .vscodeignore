@@ -1,10 +1,11 @@
 # Development
-*.map
 .circleci/
 .editorconfig
+.eslintcache
 .eslintrc*
 .gitignore
 .travis.yml
+*.map
 gulpfile.js
 package-lock.json
 rollup.config.js
