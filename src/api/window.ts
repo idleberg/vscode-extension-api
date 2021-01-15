@@ -29,25 +29,25 @@ export default {
   async setStatusBarMessage(): Promise<void> {
     const input = await vscode.window.showInputBox();
 
-    vscode.window.setStatusBarMessage(input);
+    if (input) vscode.window.setStatusBarMessage(input);
   },
 
   async showErrorMessage(): Promise<void> {
     const input = await vscode.window.showInputBox();
 
-    vscode.window.showErrorMessage(`Error Message: ${input}`);
+    if (input) vscode.window.showErrorMessage(`Error Message: ${input}`);
   },
 
   async showInformationMessage(): Promise<void> {
     const input = await vscode.window.showInputBox();
 
-    vscode.window.showInformationMessage(`Information Message: ${input}`);
+    if (input) vscode.window.showInformationMessage(`Information Message: ${input}`);
   },
 
   async showInputBox(): Promise<void> {
     const input = await vscode.window.showInputBox();
 
-    channel.log(input);
+    if (input) channel.log(input);
   },
 
   async showOpenDialog(): Promise<void> {
@@ -57,7 +57,7 @@ export default {
   async showQuickPick(): Promise<void> {
     const pick = await vscode.window.showQuickPick(['1', '2', '3']);
 
-    channel.log(`You picked ${pick}`);
+    if (pick) channel.log(`You picked ${pick}`);
   },
 
   async showSaveDialog(): Promise<void> {

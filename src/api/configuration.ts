@@ -9,6 +9,8 @@ export default {
       placeHolder: 'Enter a configuration key in dot-prop notation, e.g. `editor.fontSize`'
     });
 
+    if (!pick) return;
+
     if (dotProp.has(configuration, pick)) {
       channel.log(dotProp.get(configuration, pick), pick.includes('.')
         ? pick

@@ -27,6 +27,6 @@ export default {
     const extensions = mapExtensions();
     const pick = await vscode.window.showQuickPick([...extensions.map(item => item.id)]);
 
-    channel.log(extensions.filter(item => item.id === pick)[0]);
+    if (pick) channel.log(extensions.filter(item => item.id === pick)[0]);
   }
 }

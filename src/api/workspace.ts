@@ -43,7 +43,7 @@ export default {
   async openTextDocument(): Promise<void> {
     const input = await vscode.window.showInputBox();
 
-    await vscode.workspace.openTextDocument(input);
+    if (input) await vscode.workspace.openTextDocument(input);
   },
 
   async saveAll(): Promise<void> {
