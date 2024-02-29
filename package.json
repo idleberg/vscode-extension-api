@@ -56,6 +56,9 @@
   "engines": {
     "vscode": "^1.52.0"
   },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "categories": [],
   "contributes": {
     "commands": [
