@@ -9,6 +9,8 @@
 gulpfile.js
 package-lock.json
 rollup.config.js
+tsup.config.ts
+eslint.config.js
 src/
 tsconfig.json
 tsconfig.tsbuildinfo
