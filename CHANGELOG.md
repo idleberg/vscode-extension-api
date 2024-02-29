@@ -1,4 +1,4 @@
-# v0.1.3 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.1.3)
+# v0.1.4 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.1.4)
 
 - specify JSON as output channel language
 - update tooling
