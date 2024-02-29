@@ -1,3 +1,8 @@
+# 0.2.0 [#]()
+
+- specify JSON as output channel language
+- update tooling
+
 # v0.1.2 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.1.2)
 
 - catch aborted input action
