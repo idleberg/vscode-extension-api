@@ -145,6 +145,13 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
     })
   );
 
+  // L10n API
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.l10n.bundle', async () => {
+      API.l10n.bundle();
+    })
+  );
+
   // Tasks API
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.tasks.fetchTasks', async () => {

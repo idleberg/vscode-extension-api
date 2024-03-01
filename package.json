@@ -115,6 +115,18 @@
         "title": "Extension API: commands.getCommands()"
       },
       {
+        "command": "extension.extension-api.debug.activeDebugConsole",
+        "title": "Extension API: debug.activeDebugConsole"
+      },
+      {
+        "command": "extension.extension-api.debug.activeDebugSession",
+        "title": "Extension API: debug.activeDebugSession"
+      },
+      {
+        "command": "extension.extension-api.debug.breakpoints",
+        "title": "Extension API: debug.breakpoints"
+      },
+      {
         "command": "extension.extension-api.env",
         "title": "Extension API: env"
       },
@@ -179,20 +191,16 @@
         "title": "Extension API: extensions.all"
       },
       {
+        "command": "extension.extension-api.uri.bundle",
+        "title": "Extension API: uri.bundle()"
+      },
+      {
+        "command": "extension.extension-api.l10n.bundle",
+        "title": "Extension API: l10n.bundle()"
+      },
+      {
         "command": "extension.extension-api.extensions.getExtension",
         "title": "Extension API: extensions.getExtension()"
-      },
-      {
-        "command": "extension.extension-api.debug.activeDebugConsole",
-        "title": "Extension API: debug.activeDebugConsole"
-      },
-      {
-        "command": "extension.extension-api.debug.activeDebugSession",
-        "title": "Extension API: debug.activeDebugSession"
-      },
-      {
-        "command": "extension.extension-api.debug.breakpoints",
-        "title": "Extension API: debug.breakpoints"
       },
       {
         "command": "extension.extension-api.tasks.taskExecutions",

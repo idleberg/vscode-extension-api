@@ -11,8 +11,8 @@ function mapExtensions() {
       isActive: extension.isActive,
       packageJSON: extension.packageJSON,
     }
-  }).sort((a, b) => {
-    return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1
+  }).sort((a, z) => {
+    return a.id.toLowerCase() > z.id.toLowerCase() ? 1 : -1
   });
 }
 
