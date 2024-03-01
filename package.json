@@ -11,7 +11,9 @@
   },
   "scripts": {
     "compile": "npm run build",
-    "build": "tsup",
+    "build": "npm-run-all --parallel build:*",
+    "build:extension": "tsup",
+    "build:logo": "gulp",
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
     "lint:ts": "eslint ./src",
@@ -42,6 +44,9 @@
     "@typescript-eslint/parser": "^7.0.1",
     "eslint": "9.0.0-beta.0",
     "eslint-plugin-jsonc": "^2.13.0",
+    "gulp": "^4.0.2",
+    "gulp-raster": "^0.2.0",
+    "gulp-rename": "^2.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
@@ -51,8 +56,11 @@
     "typescript-eslint": "^7.0.2"
   },
   "extensionDependencies": [],
-  "icon": "",
-  "galleryBanner": {},
+  "icon": "resources/logo.png",
+  "galleryBanner": {
+    "color": "#8DCB8D",
+    "theme": "light"
+  },
   "engines": {
     "vscode": "^1.52.0"
   },
