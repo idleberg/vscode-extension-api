@@ -68,6 +68,10 @@ cd idleberg.extension-api && npm install
 
 This extension exposes several commands prefixed with *Extension API*. For a full list, please refer to the *Feature Contributions* tab for the extension.
 
+## Credits
+
+Extension icon based on an [icon design](https://thenounproject.com/icon/extension-2985095/) by Sabri Ramadhani
+
 ## License
 
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT).
