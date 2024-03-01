@@ -22,8 +22,20 @@ export default {
     channel.log(vscode.env.clipboard, 'env.clipboard');
   },
 
+  isNewAppInstall(): void {
+    channel.log(vscode.env.isNewAppInstall, 'env.isNewAppInstall');
+  },
+
+  isTelemetryEnabled(): void {
+    channel.log(vscode.env.isTelemetryEnabled, 'env.isTelemetryEnabled');
+  },
+
   language(): void {
     channel.log(vscode.env.language, 'env.language');
+  },
+
+  logLevel(): void {
+    channel.log(vscode.env.logLevel, 'env.logLevel');
   },
 
   machineId(): void {

@@ -73,8 +73,26 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   );
 
   context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.env.isNewAppInstall', () => {
+      API.env.isNewAppInstall();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.env.isTelemetryEnabled', () => {
+      API.env.isTelemetryEnabled();
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.env.language', () => {
       API.env.language();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.env.logLevel', () => {
+      API.env.logLevel();
     })
   );
 

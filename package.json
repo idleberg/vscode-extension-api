@@ -119,8 +119,20 @@
         "title": "Extension API: env.clipboard"
       },
       {
+        "command": "extension.extension-api.env.isTelemetryEnabled",
+        "title": "Extension API: env.isTelemetryEnabled"
+      },
+      {
+        "command": "extension.extension-api.env.isTelemetryEnabled",
+        "title": "Extension API: env.isTelemetryEnabled"
+      },
+      {
         "command": "extension.extension-api.env.language",
         "title": "Extension API: env.language"
+      },
+      {
+        "command": "extension.extension-api.env.logLevel",
+        "title": "Extension API: env.logLevel"
       },
       {
         "command": "extension.extension-api.env.machineId",
