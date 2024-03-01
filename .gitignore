@@ -13,5 +13,4 @@ yarn.lock
 
 # Project specific
 *.vsix
-resources/logo.svg
 todo.md
