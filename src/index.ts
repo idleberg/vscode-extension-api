@@ -274,10 +274,27 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
       API.workspace.fs();
     })
   );
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.isTrusted', () => {
+      API.workspace.isTrusted();
+    })
+  );
 
   context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.name', () => {
       API.workspace.name();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.notebookDocuments', () => {
+      API.workspace.notebookDocuments();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.rootPath', () => {
+      API.workspace.rootPath();
     })
   );
 
@@ -300,8 +317,26 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   );
 
   context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.asRelativePath', () => {
+      API.workspace.asRelativePath();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.getConfiguration', () => {
+      API.workspace.getConfiguration();
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.getWorkspaceFolder', () => {
       API.workspace.getWorkspaceFolder();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.workspace.openNotebookDocument', async () => {
+      await API.workspace.openNotebookDocument();
     })
   );
 

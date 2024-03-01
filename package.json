@@ -67,8 +67,20 @@
         "title": "Extension API: workspace.fs()"
       },
       {
+        "command": "extension.extension-api.workspace.isTrusted",
+        "title": "Extension API: workspace.isTrusted()"
+      },
+      {
         "command": "extension.extension-api.workspace.name",
         "title": "Extension API: workspace.name()"
+      },
+      {
+        "command": "extension.extension-api.workspace.notebookDocuments",
+        "title": "Extension API: workspace.notebookDocuments()"
+      },
+      {
+        "command": "extension.extension-api.workspace.rootPath",
+        "title": "Extension API: workspace.rootPath()"
       },
       {
         "command": "extension.extension-api.workspace.textDocuments",
@@ -83,6 +95,14 @@
         "title": "Extension API: workspace.workspaceFolders()"
       },
       {
+        "command": "extension.extension-api.workspace.asRelativePath",
+        "title": "Extension API: workspace.asRelativePath()"
+      },
+      {
+        "command": "extension.extension-api.workspace.getConfiguration",
+        "title": "Extension API: workspace.getConfiguration()"
+      },
+      {
         "command": "extension.extension-api.workspace.getWorkspaceFolder",
         "title": "Extension API: workspace.getWorkspaceFolder()"
       },
@@ -93,10 +113,6 @@
       {
         "command": "extension.extension-api.commands.getCommands",
         "title": "Extension API: commands.getCommands()"
-      },
-      {
-        "command": "extension.extension-api.configuration.getConfiguration",
-        "title": "Extension API: configuration.getConfiguration()"
       },
       {
         "command": "extension.extension-api.env",
@@ -257,6 +273,10 @@
       {
         "command": "extension.extension-api.window.showWorkspaceFolderPick",
         "title": "Extension API: window.showWorkspaceFolderPick()"
+      },
+      {
+        "command": "extension.extension-api.workspace.openNotebookDocument",
+        "title": "Extension API: workspace.openNotebookDocument()"
       },
       {
         "command": "extension.extension-api.workspace.openTextDocument",
