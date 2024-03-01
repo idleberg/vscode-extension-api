@@ -19,7 +19,7 @@
     "lint:ts": "eslint ./src",
     "lint": "npm-run-all  --parallel lint:*",
     "prepare": "husky",
-    "start": "npm run build -- --watch",
+    "start": "npm run build:extension -- --watch",
     "test": "npm run lint",
     "vscode:prepublish": "npm run build"
   },
