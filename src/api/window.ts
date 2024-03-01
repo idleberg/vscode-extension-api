@@ -22,13 +22,32 @@ export default {
     channel.log(vscode.window.state);
   },
 
+  tabGroups(): void {
+    channel.log(vscode.window.tabGroups);
+  },
+
   terminals(): void {
     channel.log(vscode.window.terminals);
+  },
+
+  visibleNotebookEditors(): void {
+    channel.log(vscode.window.visibleNotebookEditors);
   },
 
   visibleTextEditors(): void {
     channel.log(vscode.window.visibleTextEditors);
   },
+
+  /**
+   * TODO: Add the following methods to the API
+   * - createInputBox()
+   * - createOutputChannel()
+   * - createQuickPick()
+   * - createStatusBarItem() ?
+   * - createTerminal() ?
+   * - showNotebookDocument ?
+   * - showTextDocument
+   */
 
   async setStatusBarMessage(): Promise<void> {
     const input = await vscode.window.showInputBox();

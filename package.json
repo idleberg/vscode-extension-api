@@ -207,8 +207,16 @@
         "title": "Extension API: window.state"
       },
       {
+        "command": "extension.extension-api.window.tabGroups",
+        "title": "Extension API: window.tabGroups"
+      },
+      {
         "command": "extension.extension-api.window.terminals",
         "title": "Extension API: window.terminals"
+      },
+      {
+        "command": "extension.extension-api.window.visibleNotebookEditors",
+        "title": "Extension API: window.visibleNotebookEditors"
       },
       {
         "command": "extension.extension-api.window.visibleTextEditors",

@@ -191,8 +191,20 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   );
 
   context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.window.tabGroups', () => {
+      API.window.tabGroups();
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.window.terminals', () => {
       API.window.terminals();
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.window.visibleNotebookEditors', () => {
+      API.window.visibleNotebookEditors();
     })
   );
 
