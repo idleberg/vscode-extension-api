@@ -1,3 +1,7 @@
+# v0.2.2 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.2.2)
+
+- fix build
+
 # v0.2.1 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.2.1)
 
 - fix extension icon
