@@ -30,14 +30,14 @@ export default {
       return;
     }
 
-    const { uri } = vscode.workspace.getWorkspaceFolder(editor?.document?.uri);
+    const workspaceFolder = vscode.workspace.getWorkspaceFolder(editor?.document?.uri);
 
-    if (!uri.fsPath?.length) {
+    if (!workspaceFolder?.uri?.fsPath?.length) {
       vscode.window.showWarningMessage('No open workspaces');
       return;
     }
 
-    channel.log(uri.fsPath);
+    channel.log(workspaceFolder.uri.fsPath);
   },
 
   async openTextDocument(): Promise<void> {
