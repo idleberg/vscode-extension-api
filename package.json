@@ -87,6 +87,10 @@
         "title": "Extension API: workspace.getWorkspaceFolder()"
       },
       {
+        "command": "extension.extension-api.commands.executeCommand",
+        "title": "Extension API: commands.executeCommand()"
+      },
+      {
         "command": "extension.extension-api.commands.getCommands",
         "title": "Extension API: commands.getCommands()"
       },

@@ -5,6 +5,12 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
 
   // Commands API
   context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.commands.executeCommand', async () => {
+      await API.commands.executeCommand();
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.commands.getCommands', async () => {
       await API.commands.getCommands();
     })
