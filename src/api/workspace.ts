@@ -22,7 +22,7 @@ export default {
     channel.log(vscode.workspace.workspaceFolders);
   },
 
-  getWorkspaceFolder(): null | string {
+  getWorkspaceFolder(): void {
     const editor = vscode.window.activeTextEditor;
 
     if (!editor) {
