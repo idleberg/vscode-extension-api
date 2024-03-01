@@ -191,12 +191,12 @@
         "title": "Extension API: extensions.all"
       },
       {
-        "command": "extension.extension-api.uri.bundle",
-        "title": "Extension API: uri.bundle()"
+        "command": "extension.extension-api.l10n.bundle",
+        "title": "Extension API: l10n.bundle"
       },
       {
-        "command": "extension.extension-api.l10n.bundle",
-        "title": "Extension API: l10n.bundle()"
+        "command": "extension.extension-api.l10n.uri",
+        "title": "Extension API: l10n.uri"
       },
       {
         "command": "extension.extension-api.extensions.getExtension",
