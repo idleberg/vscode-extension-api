@@ -49,6 +49,12 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   );
 
   context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.env.appHost', () => {
+      API.env.appHost();
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.env.appName', () => {
       API.env.appName();
     })

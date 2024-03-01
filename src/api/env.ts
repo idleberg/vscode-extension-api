@@ -6,6 +6,10 @@ export default {
     channel.log(vscode.env);
   },
 
+  appHost(): void {
+    channel.log(vscode.env.appHost, 'env.appHost');
+  },
+
   appName(): void {
     channel.log(vscode.env.appName, 'env.appName');
   },

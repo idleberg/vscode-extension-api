@@ -103,6 +103,10 @@
         "title": "Extension API: env"
       },
       {
+        "command": "extension.extension-api.env.appHost",
+        "title": "Extension API: env.appHost"
+      },
+      {
         "command": "extension.extension-api.env.appName",
         "title": "Extension API: env.appName"
       },
