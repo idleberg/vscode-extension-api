@@ -1,8 +1,8 @@
-import vscode from 'vscode';
+import { extensions, window } from 'vscode';
 import channel from '../channel'
 
 function mapExtensions() {
-  return vscode.extensions.all.map(extension => {
+  return extensions.all.map(extension => {
     return {
       extensionKind: extension.extensionKind,
       extensionPath: extension.extensionPath,
@@ -25,7 +25,7 @@ export default {
 
   async getExtension(): Promise<void> {
     const extensions = mapExtensions();
-    const pick = await vscode.window.showQuickPick([...extensions.map(item => item.id)]);
+    const pick = await window.showQuickPick([...extensions.map(item => item.id)]);
 
     if (pick) channel.log(extensions.filter(item => item.id === pick)[0]);
   }

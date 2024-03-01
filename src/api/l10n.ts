@@ -1,12 +1,12 @@
-import vscode from 'vscode';
+import { l10n } from 'vscode';
 import channel from '../channel'
 
 export default {
   bundle(): void {
-    channel.log(vscode.l10n.bundle);
+    channel.log(l10n.bundle);
   },
 
   uri(): void {
-    channel.log(vscode.l10n.uri);
+    channel.log(l10n.uri);
   },
 }

@@ -1,14 +1,14 @@
-import vscode from 'vscode';
+import { tasks } from 'vscode';
 import channel from '../channel'
 
 export default {
   taskExecutions(): void {
-    channel.log(vscode.tasks.taskExecutions);
+    channel.log(tasks.taskExecutions);
   },
 
   async fetchTasks(): Promise<void> {
-    const tasks = await vscode.tasks.fetchTasks();
+    const fetchedTasks = await tasks.fetchTasks();
 
-    channel.log(tasks);
+    channel.log(fetchedTasks);
   },
 }

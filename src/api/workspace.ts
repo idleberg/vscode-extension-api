@@ -1,50 +1,50 @@
-import vscode from 'vscode';
+import { window, workspace } from 'vscode';
 import channel from '../channel'
 import dotProp from 'dot-prop';
 
 export default {
   fs(): void {
-    channel.log(vscode.workspace.fs);
+    channel.log(workspace.fs);
   },
 
   isTrusted(): void {
-    channel.log(vscode.workspace.isTrusted);
+    channel.log(workspace.isTrusted);
   },
 
   name(): void {
-    channel.log(vscode.workspace.name);
+    channel.log(workspace.name);
   },
 
   notebookDocuments(): void {
-    channel.log(vscode.workspace.notebookDocuments);
+    channel.log(workspace.notebookDocuments);
   },
 
   rootPath(): void {
-    channel.log(vscode.workspace.rootPath);
+    channel.log(workspace.rootPath);
   },
 
   textDocuments(): void {
-    channel.log(vscode.workspace.textDocuments);
+    channel.log(workspace.textDocuments);
   },
 
   workspaceFile(): void {
-    channel.log(vscode.workspace.workspaceFile);
+    channel.log(workspace.workspaceFile);
   },
 
   workspaceFolders(): void {
-    channel.log(vscode.workspace.workspaceFolders);
+    channel.log(workspace.workspaceFolders);
   },
 
 
   async asRelativePath(): Promise<void> {
-    const input = await vscode.window.showInputBox();
+    const input = await window.showInputBox();
 
-    if (input) await vscode.workspace.asRelativePath(input);
+    if (input) await workspace.asRelativePath(input);
   },
 
   async getConfiguration(): Promise<void> {
-    const configuration = vscode.workspace.getConfiguration();
-    const pick = await vscode.window.showInputBox({
+    const configuration = workspace.getConfiguration();
+    const pick = await window.showInputBox({
       placeHolder: 'Enter a configuration key in dot-prop notation, e.g. `editor.fontSize`'
     });
 
@@ -61,17 +61,17 @@ export default {
   },
 
   getWorkspaceFolder(): void {
-    const editor = vscode.window.activeTextEditor;
+    const editor = window.activeTextEditor;
 
     if (!editor) {
-      vscode.window.showWarningMessage('No open editors');
+      window.showWarningMessage('No open editors');
       return;
     }
 
-    const workspaceFolder = vscode.workspace.getWorkspaceFolder(editor?.document?.uri);
+    const workspaceFolder = workspace.getWorkspaceFolder(editor?.document?.uri);
 
     if (!workspaceFolder?.uri?.fsPath?.length) {
-      vscode.window.showWarningMessage('No open workspaces');
+      window.showWarningMessage('No open workspaces');
       return;
     }
 
@@ -79,19 +79,19 @@ export default {
   },
 
   async openNotebookDocument(): Promise<void> {
-    const input = await vscode.window.showInputBox();
+    const input = await window.showInputBox();
 
-    if (input) await vscode.workspace.openNotebookDocument(input);
+    if (input) await workspace.openNotebookDocument(input);
   },
 
   async openTextDocument(): Promise<void> {
-    const input = await vscode.window.showInputBox();
+    const input = await window.showInputBox();
 
-    if (input) await vscode.workspace.openTextDocument(input);
+    if (input) await workspace.openTextDocument(input);
   },
 
   async saveAll(): Promise<void> {
-    vscode.workspace.saveAll();
+    workspace.saveAll();
   },
 };
 

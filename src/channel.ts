@@ -1,7 +1,7 @@
-import vscode from 'vscode';
+import { window } from 'vscode';
 
 export default {
-  outputChannel: vscode.window.createOutputChannel('Extension API', 'json'),
+  outputChannel: window.createOutputChannel('Extension API', 'json'),
 
   clear(): void {
     this.outputChannel.clear();
