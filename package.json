@@ -191,6 +191,10 @@
         "title": "Extension API: window.activeColorTheme"
       },
       {
+        "command": "extension.extension-api.window.activeNotebookEditor",
+        "title": "Extension API: window.activeNotebookEditor"
+      },
+      {
         "command": "extension.extension-api.window.activeTerminal",
         "title": "Extension API: window.activeTerminal"
       },

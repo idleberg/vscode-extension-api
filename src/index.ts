@@ -167,6 +167,12 @@ async function activate(context: vscode.ExtensionContext): Promise<void> {
   );
 
   context.subscriptions.push(
+    vscode.commands.registerTextEditorCommand('extension.extension-api.window.activeNotebookEditor', () => {
+      API.window.activeNotebookEditor();
+    })
+  );
+
+  context.subscriptions.push(
     vscode.commands.registerTextEditorCommand('extension.extension-api.window.activeTerminal', () => {
       API.window.activeTerminal();
     })

@@ -6,6 +6,10 @@ export default {
     channel.log(vscode.window.activeColorTheme);
   },
 
+  activeNotebookEditor(): void {
+    channel.log(vscode.window.activeNotebookEditor);
+  },
+
   activeTerminal(): void {
     channel.log(vscode.window.activeTerminal);
   },
