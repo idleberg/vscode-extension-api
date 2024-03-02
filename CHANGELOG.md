@@ -1,3 +1,8 @@
+# v0.2.3 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.2.3)
+
+- add option for `window.showQuickPick`
+- fix: force bundling third-party dependencies
+
 # v0.2.2 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.2.2)
 
 - fix build
