@@ -78,7 +78,10 @@ export default {
   },
 
   async showQuickPick(): Promise<void> {
-    const pick = await window.showQuickPick(['1', '2', '3']);
+    const option = await window.showQuickPick(['Select one item only', 'Allow selecting multiple items']);
+    const pick = await window.showQuickPick(['1', '2', '3'], {
+      canPickMany: option === 'Allow selecting multiple items',
+    });
 
     if (pick) channel.log(`You picked ${pick}`);
   },
