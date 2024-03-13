@@ -13,4 +13,5 @@ yarn.lock
 
 # Project specific
 *.vsix
+/resources
 todo.md

@@ -11,7 +11,9 @@
   },
   "scripts": {
     "compile": "npm run build",
-    "build": "tsup",
+    "build": "npm-run-all --parallel build:*",
+    "build:extension": "tsup",
+    "build:icon": "mkdirp resources && sharp resize 1200 1200 --input ./src/resources/logo.svg --output ./resources/logo.png",
     "dev": "npm run start",
     "fix": "eslint --fix ./src",
     "lint:ts": "eslint ./src",
@@ -44,8 +46,10 @@
     "eslint-plugin-jsonc": "^2.13.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "mkdirp": "^3.0.1",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
+    "sharp-cli": "^4.2.0",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.0.2"
