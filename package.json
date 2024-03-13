@@ -2,7 +2,7 @@
   "name": "extension-api",
   "displayName": "Extension API",
   "description": "Logs Extension API results to the output channel",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "publisher": "idleberg",
   "license": "MIT",
   "author": {
