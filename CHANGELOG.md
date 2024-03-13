@@ -1,6 +1,7 @@
 # v0.2.4 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.2.4)
 
 - modify command registration
+- build extension icon from source
 
 # v0.2.3 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.2.3)
 
