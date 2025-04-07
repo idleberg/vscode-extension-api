@@ -34,7 +34,8 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "dot-prop": "^6.0.1"
+    "dot-prop": "^6.0.1",
+    "nano-staged": "^0.8.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
@@ -47,7 +48,6 @@
     "eslint": "9.0.0-beta.0",
     "eslint-plugin-jsonc": "^2.13.0",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
     "mkdirp": "^3.0.1",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
@@ -305,7 +305,7 @@
       }
     ]
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.ts": "eslint --cache --fix"
   },
   "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
