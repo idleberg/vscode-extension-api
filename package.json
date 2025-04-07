@@ -19,6 +19,8 @@
 		"lint:ts": "eslint ./src",
 		"lint": "concurrently --prefix '{name}' -c 'blue,green' 'npm:lint:*'",
 		"prepare": "husky",
+		"publish:ovsx": "ovsx publish --no-dependencies",
+		"publish:vsce": "vsce publish --githubBranch main --no-dependencies",
 		"start": "npm run build -- --watch",
 		"test": "echo \"no tests yet\" && exit 0",
 		"vscode:prepublish": "npm run build"
