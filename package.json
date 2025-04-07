@@ -1,317 +1,317 @@
 {
-  "name": "extension-api",
-  "displayName": "Extension API",
-  "description": "Logs Extension API results to the output channel",
-  "version": "0.2.4",
-  "publisher": "idleberg",
-  "license": "MIT",
-  "author": {
-    "name": "Jan T. Sott",
-    "url": "http://github.com/idleberg"
-  },
-  "scripts": {
-    "compile": "npm run build",
-    "build": "npm-run-all --parallel build:*",
-    "build:extension": "tsup",
-    "build:icon": "mkdirp resources && sharp resize 1200 1200 --input ./src/resources/logo.svg --output ./resources/logo.png",
-    "dev": "npm run start",
-    "fix": "eslint --fix ./src",
-    "lint:ts": "eslint ./src",
-    "lint": "npm-run-all --parallel lint:*",
-    "prepare": "husky",
-    "start": "npm run build -- --watch",
-    "test": "npm run lint",
-    "vscode:prepublish": "npm run build"
-  },
-  "keywords": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/idleberg/vscode-extension-api"
-  },
-  "homepage": "https://github.com/idleberg/vscode-extension-api#readme",
-  "bugs": {
-    "url": "https://github.com/idleberg/vscode-extension-api/issues"
-  },
-  "main": "./lib/index.js",
-  "dependencies": {
-    "dot-prop": "^6.0.1",
-    "nano-staged": "^0.8.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "@eslint/js": "^8.56.0",
-    "@total-typescript/tsconfig": "^1.0.4",
-    "@types/node": "^20.11.19",
-    "@types/vscode": "^1.52.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
-    "eslint": "9.0.0-beta.0",
-    "eslint-plugin-jsonc": "^2.13.0",
-    "husky": "^9.0.11",
-    "mkdirp": "^3.0.1",
-    "npm-run-all2": "^6.1.2",
-    "prettier": "^3.2.5",
-    "sharp-cli": "^4.2.0",
-    "tsup": "^8.0.2",
-    "typescript": "^5.3.3",
-    "typescript-eslint": "^7.0.2"
-  },
-  "extensionDependencies": [],
-  "icon": "resources/logo.png",
-  "galleryBanner": {
-    "color": "#8DCB8D",
-    "theme": "light"
-  },
-  "engines": {
-    "vscode": "^1.52.0"
-  },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "categories": [],
-  "contributes": {
-    "commands": [
-      {
-        "command": "extension.extension-api.workspace.fs",
-        "title": "Extension API: workspace.fs()"
-      },
-      {
-        "command": "extension.extension-api.workspace.isTrusted",
-        "title": "Extension API: workspace.isTrusted()"
-      },
-      {
-        "command": "extension.extension-api.workspace.name",
-        "title": "Extension API: workspace.name()"
-      },
-      {
-        "command": "extension.extension-api.workspace.notebookDocuments",
-        "title": "Extension API: workspace.notebookDocuments()"
-      },
-      {
-        "command": "extension.extension-api.workspace.rootPath",
-        "title": "Extension API: workspace.rootPath()"
-      },
-      {
-        "command": "extension.extension-api.workspace.textDocuments",
-        "title": "Extension API: workspace.textDocuments()"
-      },
-      {
-        "command": "extension.extension-api.workspace.workspaceFile",
-        "title": "Extension API: workspace.workspaceFile()"
-      },
-      {
-        "command": "extension.extension-api.workspace.workspaceFolders",
-        "title": "Extension API: workspace.workspaceFolders()"
-      },
-      {
-        "command": "extension.extension-api.workspace.asRelativePath",
-        "title": "Extension API: workspace.asRelativePath()"
-      },
-      {
-        "command": "extension.extension-api.workspace.getConfiguration",
-        "title": "Extension API: workspace.getConfiguration()"
-      },
-      {
-        "command": "extension.extension-api.workspace.getWorkspaceFolder",
-        "title": "Extension API: workspace.getWorkspaceFolder()"
-      },
-      {
-        "command": "extension.extension-api.commands.executeCommand",
-        "title": "Extension API: commands.executeCommand()"
-      },
-      {
-        "command": "extension.extension-api.commands.getCommands",
-        "title": "Extension API: commands.getCommands()"
-      },
-      {
-        "command": "extension.extension-api.debug.activeDebugConsole",
-        "title": "Extension API: debug.activeDebugConsole"
-      },
-      {
-        "command": "extension.extension-api.debug.activeDebugSession",
-        "title": "Extension API: debug.activeDebugSession"
-      },
-      {
-        "command": "extension.extension-api.debug.breakpoints",
-        "title": "Extension API: debug.breakpoints"
-      },
-      {
-        "command": "extension.extension-api.env",
-        "title": "Extension API: env"
-      },
-      {
-        "command": "extension.extension-api.env.appHost",
-        "title": "Extension API: env.appHost"
-      },
-      {
-        "command": "extension.extension-api.env.appName",
-        "title": "Extension API: env.appName"
-      },
-      {
-        "command": "extension.extension-api.env.appRoot",
-        "title": "Extension API: env.appRoot"
-      },
-      {
-        "command": "extension.extension-api.env.clipboard",
-        "title": "Extension API: env.clipboard"
-      },
-      {
-        "command": "extension.extension-api.env.isNewAppInstall",
-        "title": "Extension API: env.isNewAppInstall"
-      },
-      {
-        "command": "extension.extension-api.env.isTelemetryEnabled",
-        "title": "Extension API: env.isTelemetryEnabled"
-      },
-      {
-        "command": "extension.extension-api.env.language",
-        "title": "Extension API: env.language"
-      },
-      {
-        "command": "extension.extension-api.env.logLevel",
-        "title": "Extension API: env.logLevel"
-      },
-      {
-        "command": "extension.extension-api.env.machineId",
-        "title": "Extension API: env.machineId"
-      },
-      {
-        "command": "extension.extension-api.env.remoteName",
-        "title": "Extension API: env.remoteName"
-      },
-      {
-        "command": "extension.extension-api.env.sessionId",
-        "title": "Extension API: env.sessionId"
-      },
-      {
-        "command": "extension.extension-api.env.shell",
-        "title": "Extension API: env.shell"
-      },
-      {
-        "command": "extension.extension-api.env.uiKind",
-        "title": "Extension API: env.uiKind"
-      },
-      {
-        "command": "extension.extension-api.env.uriScheme",
-        "title": "Extension API: env.uriScheme"
-      },
-      {
-        "command": "extension.extension-api.extensions.all",
-        "title": "Extension API: extensions.all"
-      },
-      {
-        "command": "extension.extension-api.l10n.bundle",
-        "title": "Extension API: l10n.bundle"
-      },
-      {
-        "command": "extension.extension-api.l10n.uri",
-        "title": "Extension API: l10n.uri"
-      },
-      {
-        "command": "extension.extension-api.extensions.getExtension",
-        "title": "Extension API: extensions.getExtension()"
-      },
-      {
-        "command": "extension.extension-api.tasks.taskExecutions",
-        "title": "Extension API: tasks.taskExecutions"
-      },
-      {
-        "command": "extension.extension-api.tasks.fetchTasks",
-        "title": "Extension API: tasks.fetchTasks()"
-      },
-      {
-        "command": "extension.extension-api.window.activeColorTheme",
-        "title": "Extension API: window.activeColorTheme"
-      },
-      {
-        "command": "extension.extension-api.window.activeNotebookEditor",
-        "title": "Extension API: window.activeNotebookEditor"
-      },
-      {
-        "command": "extension.extension-api.window.activeTerminal",
-        "title": "Extension API: window.activeTerminal"
-      },
-      {
-        "command": "extension.extension-api.window.activeTextEditor",
-        "title": "Extension API: window.activeTextEditor"
-      },
-      {
-        "command": "extension.extension-api.window.state",
-        "title": "Extension API: window.state"
-      },
-      {
-        "command": "extension.extension-api.window.tabGroups",
-        "title": "Extension API: window.tabGroups"
-      },
-      {
-        "command": "extension.extension-api.window.terminals",
-        "title": "Extension API: window.terminals"
-      },
-      {
-        "command": "extension.extension-api.window.visibleNotebookEditors",
-        "title": "Extension API: window.visibleNotebookEditors"
-      },
-      {
-        "command": "extension.extension-api.window.visibleTextEditors",
-        "title": "Extension API: window.visibleTextEditors"
-      },
-      {
-        "command": "extension.extension-api.window.setStatusBarMessage",
-        "title": "Extension API: window.setStatusBarMessage()"
-      },
-      {
-        "command": "extension.extension-api.window.showErrorMessage",
-        "title": "Extension API: window.showErrorMessage()"
-      },
-      {
-        "command": "extension.extension-api.window.showInformationMessage",
-        "title": "Extension API: window.showInformationMessage()"
-      },
-      {
-        "command": "extension.extension-api.window.showInputBox",
-        "title": "Extension API: window.showInputBox()"
-      },
-      {
-        "command": "extension.extension-api.window.showOpenDialog",
-        "title": "Extension API: window.showOpenDialog()"
-      },
-      {
-        "command": "extension.extension-api.window.showQuickPick",
-        "title": "Extension API: window.showQuickPick()"
-      },
-      {
-        "command": "extension.extension-api.window.showSaveDialog",
-        "title": "Extension API: window.showSaveDialog()"
-      },
-      {
-        "command": "extension.extension-api.window.showWarningMessage",
-        "title": "Extension API: window.showWarningMessage()"
-      },
-      {
-        "command": "extension.extension-api.window.showWorkspaceFolderPick",
-        "title": "Extension API: window.showWorkspaceFolderPick()"
-      },
-      {
-        "command": "extension.extension-api.workspace.openNotebookDocument",
-        "title": "Extension API: workspace.openNotebookDocument()"
-      },
-      {
-        "command": "extension.extension-api.workspace.openTextDocument",
-        "title": "Extension API: workspace.openTextDocument()"
-      },
-      {
-        "command": "extension.extension-api.workspace.saveAll",
-        "title": "Extension API: workspace.saveAll()"
-      }
-    ]
-  },
-  "nano-staged": {
-    "*.(ts|json|yml)": [
-      "eslint --cache --fix",
-      "prettier --write"
-    ],
-    "*.md": "prettier --write"
-  },
-  "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
+	"name": "extension-api",
+	"displayName": "Extension API",
+	"description": "Logs Extension API results to the output channel",
+	"version": "0.2.4",
+	"publisher": "idleberg",
+	"license": "MIT",
+	"author": {
+		"name": "Jan T. Sott",
+		"url": "http://github.com/idleberg"
+	},
+	"scripts": {
+		"compile": "npm run build",
+		"build": "npm-run-all --parallel build:*",
+		"build:extension": "tsup",
+		"build:icon": "mkdirp resources && sharp resize 1200 1200 --input ./src/resources/logo.svg --output ./resources/logo.png",
+		"dev": "npm run start",
+		"fix": "eslint --fix ./src",
+		"lint:ts": "eslint ./src",
+		"lint": "npm-run-all --parallel lint:*",
+		"prepare": "husky",
+		"start": "npm run build -- --watch",
+		"test": "echo \"no tests yet\" && exit 0",
+		"vscode:prepublish": "npm run build"
+	},
+	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/idleberg/vscode-extension-api"
+	},
+	"homepage": "https://github.com/idleberg/vscode-extension-api#readme",
+	"bugs": {
+		"url": "https://github.com/idleberg/vscode-extension-api/issues"
+	},
+	"main": "./lib/index.js",
+	"dependencies": {
+		"dot-prop": "^6.0.1",
+		"nano-staged": "^0.8.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.8.0",
+		"@commitlint/config-conventional": "^19.8.0",
+		"@eslint/js": "^8.56.0",
+		"@total-typescript/tsconfig": "^1.0.4",
+		"@types/node": "^20.11.19",
+		"@types/vscode": "^1.52.0",
+		"@typescript-eslint/eslint-plugin": "^7.0.1",
+		"@typescript-eslint/parser": "^7.0.1",
+		"eslint": "9.0.0-beta.0",
+		"eslint-plugin-jsonc": "^2.13.0",
+		"husky": "^9.0.11",
+		"mkdirp": "^3.0.1",
+		"npm-run-all2": "^6.1.2",
+		"prettier": "^3.2.5",
+		"sharp-cli": "^4.2.0",
+		"tsup": "^8.0.2",
+		"typescript": "^5.3.3",
+		"typescript-eslint": "^7.0.2"
+	},
+	"extensionDependencies": [],
+	"icon": "resources/logo.png",
+	"galleryBanner": {
+		"color": "#8DCB8D",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"categories": [],
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.extension-api.workspace.fs",
+				"title": "Extension API: workspace.fs()"
+			},
+			{
+				"command": "extension.extension-api.workspace.isTrusted",
+				"title": "Extension API: workspace.isTrusted()"
+			},
+			{
+				"command": "extension.extension-api.workspace.name",
+				"title": "Extension API: workspace.name()"
+			},
+			{
+				"command": "extension.extension-api.workspace.notebookDocuments",
+				"title": "Extension API: workspace.notebookDocuments()"
+			},
+			{
+				"command": "extension.extension-api.workspace.rootPath",
+				"title": "Extension API: workspace.rootPath()"
+			},
+			{
+				"command": "extension.extension-api.workspace.textDocuments",
+				"title": "Extension API: workspace.textDocuments()"
+			},
+			{
+				"command": "extension.extension-api.workspace.workspaceFile",
+				"title": "Extension API: workspace.workspaceFile()"
+			},
+			{
+				"command": "extension.extension-api.workspace.workspaceFolders",
+				"title": "Extension API: workspace.workspaceFolders()"
+			},
+			{
+				"command": "extension.extension-api.workspace.asRelativePath",
+				"title": "Extension API: workspace.asRelativePath()"
+			},
+			{
+				"command": "extension.extension-api.workspace.getConfiguration",
+				"title": "Extension API: workspace.getConfiguration()"
+			},
+			{
+				"command": "extension.extension-api.workspace.getWorkspaceFolder",
+				"title": "Extension API: workspace.getWorkspaceFolder()"
+			},
+			{
+				"command": "extension.extension-api.commands.executeCommand",
+				"title": "Extension API: commands.executeCommand()"
+			},
+			{
+				"command": "extension.extension-api.commands.getCommands",
+				"title": "Extension API: commands.getCommands()"
+			},
+			{
+				"command": "extension.extension-api.debug.activeDebugConsole",
+				"title": "Extension API: debug.activeDebugConsole"
+			},
+			{
+				"command": "extension.extension-api.debug.activeDebugSession",
+				"title": "Extension API: debug.activeDebugSession"
+			},
+			{
+				"command": "extension.extension-api.debug.breakpoints",
+				"title": "Extension API: debug.breakpoints"
+			},
+			{
+				"command": "extension.extension-api.env",
+				"title": "Extension API: env"
+			},
+			{
+				"command": "extension.extension-api.env.appHost",
+				"title": "Extension API: env.appHost"
+			},
+			{
+				"command": "extension.extension-api.env.appName",
+				"title": "Extension API: env.appName"
+			},
+			{
+				"command": "extension.extension-api.env.appRoot",
+				"title": "Extension API: env.appRoot"
+			},
+			{
+				"command": "extension.extension-api.env.clipboard",
+				"title": "Extension API: env.clipboard"
+			},
+			{
+				"command": "extension.extension-api.env.isNewAppInstall",
+				"title": "Extension API: env.isNewAppInstall"
+			},
+			{
+				"command": "extension.extension-api.env.isTelemetryEnabled",
+				"title": "Extension API: env.isTelemetryEnabled"
+			},
+			{
+				"command": "extension.extension-api.env.language",
+				"title": "Extension API: env.language"
+			},
+			{
+				"command": "extension.extension-api.env.logLevel",
+				"title": "Extension API: env.logLevel"
+			},
+			{
+				"command": "extension.extension-api.env.machineId",
+				"title": "Extension API: env.machineId"
+			},
+			{
+				"command": "extension.extension-api.env.remoteName",
+				"title": "Extension API: env.remoteName"
+			},
+			{
+				"command": "extension.extension-api.env.sessionId",
+				"title": "Extension API: env.sessionId"
+			},
+			{
+				"command": "extension.extension-api.env.shell",
+				"title": "Extension API: env.shell"
+			},
+			{
+				"command": "extension.extension-api.env.uiKind",
+				"title": "Extension API: env.uiKind"
+			},
+			{
+				"command": "extension.extension-api.env.uriScheme",
+				"title": "Extension API: env.uriScheme"
+			},
+			{
+				"command": "extension.extension-api.extensions.all",
+				"title": "Extension API: extensions.all"
+			},
+			{
+				"command": "extension.extension-api.l10n.bundle",
+				"title": "Extension API: l10n.bundle"
+			},
+			{
+				"command": "extension.extension-api.l10n.uri",
+				"title": "Extension API: l10n.uri"
+			},
+			{
+				"command": "extension.extension-api.extensions.getExtension",
+				"title": "Extension API: extensions.getExtension()"
+			},
+			{
+				"command": "extension.extension-api.tasks.taskExecutions",
+				"title": "Extension API: tasks.taskExecutions"
+			},
+			{
+				"command": "extension.extension-api.tasks.fetchTasks",
+				"title": "Extension API: tasks.fetchTasks()"
+			},
+			{
+				"command": "extension.extension-api.window.activeColorTheme",
+				"title": "Extension API: window.activeColorTheme"
+			},
+			{
+				"command": "extension.extension-api.window.activeNotebookEditor",
+				"title": "Extension API: window.activeNotebookEditor"
+			},
+			{
+				"command": "extension.extension-api.window.activeTerminal",
+				"title": "Extension API: window.activeTerminal"
+			},
+			{
+				"command": "extension.extension-api.window.activeTextEditor",
+				"title": "Extension API: window.activeTextEditor"
+			},
+			{
+				"command": "extension.extension-api.window.state",
+				"title": "Extension API: window.state"
+			},
+			{
+				"command": "extension.extension-api.window.tabGroups",
+				"title": "Extension API: window.tabGroups"
+			},
+			{
+				"command": "extension.extension-api.window.terminals",
+				"title": "Extension API: window.terminals"
+			},
+			{
+				"command": "extension.extension-api.window.visibleNotebookEditors",
+				"title": "Extension API: window.visibleNotebookEditors"
+			},
+			{
+				"command": "extension.extension-api.window.visibleTextEditors",
+				"title": "Extension API: window.visibleTextEditors"
+			},
+			{
+				"command": "extension.extension-api.window.setStatusBarMessage",
+				"title": "Extension API: window.setStatusBarMessage()"
+			},
+			{
+				"command": "extension.extension-api.window.showErrorMessage",
+				"title": "Extension API: window.showErrorMessage()"
+			},
+			{
+				"command": "extension.extension-api.window.showInformationMessage",
+				"title": "Extension API: window.showInformationMessage()"
+			},
+			{
+				"command": "extension.extension-api.window.showInputBox",
+				"title": "Extension API: window.showInputBox()"
+			},
+			{
+				"command": "extension.extension-api.window.showOpenDialog",
+				"title": "Extension API: window.showOpenDialog()"
+			},
+			{
+				"command": "extension.extension-api.window.showQuickPick",
+				"title": "Extension API: window.showQuickPick()"
+			},
+			{
+				"command": "extension.extension-api.window.showSaveDialog",
+				"title": "Extension API: window.showSaveDialog()"
+			},
+			{
+				"command": "extension.extension-api.window.showWarningMessage",
+				"title": "Extension API: window.showWarningMessage()"
+			},
+			{
+				"command": "extension.extension-api.window.showWorkspaceFolderPick",
+				"title": "Extension API: window.showWorkspaceFolderPick()"
+			},
+			{
+				"command": "extension.extension-api.workspace.openNotebookDocument",
+				"title": "Extension API: workspace.openNotebookDocument()"
+			},
+			{
+				"command": "extension.extension-api.workspace.openTextDocument",
+				"title": "Extension API: workspace.openTextDocument()"
+			},
+			{
+				"command": "extension.extension-api.workspace.saveAll",
+				"title": "Extension API: workspace.saveAll()"
+			}
+		]
+	},
+	"nano-staged": {
+		"*.(ts|json|yml)": [
+			"eslint --cache --fix",
+			"prettier --write"
+		],
+		"*.md": "prettier --write"
+	},
+	"packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
 }
