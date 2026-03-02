@@ -1,6 +1,6 @@
-import { window, workspace } from "vscode";
-import channel from "../channel";
-import dotProp from "dot-prop";
+import dotProp from 'dot-prop';
+import { window, workspace } from 'vscode';
+import channel from '../channel';
 
 export default {
 	fs(): void {
@@ -44,17 +44,13 @@ export default {
 	async getConfiguration(): Promise<void> {
 		const configuration = workspace.getConfiguration();
 		const pick = await window.showInputBox({
-			placeHolder:
-				"Enter a configuration key in dot-prop notation, e.g. `editor.fontSize`",
+			placeHolder: 'Enter a configuration key in dot-prop notation, e.g. `editor.fontSize`',
 		});
 
 		if (!pick) return;
 
 		if (dotProp.has(configuration, pick)) {
-			channel.log(
-				dotProp.get(configuration, pick),
-				pick.includes(".") ? pick : "",
-			);
+			channel.log(dotProp.get(configuration, pick), pick.includes('.') ? pick : '');
 		} else {
 			channel.log(configuration);
 		}
@@ -64,14 +60,14 @@ export default {
 		const editor = window.activeTextEditor;
 
 		if (!editor) {
-			window.showWarningMessage("No open editors");
+			window.showWarningMessage('No open editors');
 			return;
 		}
 
 		const workspaceFolder = workspace.getWorkspaceFolder(editor?.document?.uri);
 
 		if (!workspaceFolder?.uri?.fsPath?.length) {
-			window.showWarningMessage("No open workspaces");
+			window.showWarningMessage('No open workspaces');
 			return;
 		}
 

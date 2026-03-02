@@ -1,5 +1,5 @@
-import { tasks } from "vscode";
-import channel from "../channel";
+import { tasks } from 'vscode';
+import channel from '../channel';
 
 export default {
 	taskExecutions(): void {

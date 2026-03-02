@@ -1,5 +1,5 @@
-import { window } from "vscode";
-import channel from "../channel";
+import { window } from 'vscode';
+import channel from '../channel';
 
 export default {
 	activeColorTheme(): void {
@@ -78,12 +78,9 @@ export default {
 	},
 
 	async showQuickPick(): Promise<void> {
-		const option = await window.showQuickPick([
-			"Select one item only",
-			"Allow selecting multiple items",
-		]);
-		const pick = await window.showQuickPick(["1", "2", "3"], {
-			canPickMany: option === "Allow selecting multiple items",
+		const option = await window.showQuickPick(['Select one item only', 'Allow selecting multiple items']);
+		const pick = await window.showQuickPick(['1', '2', '3'], {
+			canPickMany: option === 'Allow selecting multiple items',
 		});
 
 		if (pick) channel.log(`You picked ${pick}`);

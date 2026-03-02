@@ -1,7 +1,7 @@
-import { window } from "vscode";
+import { window } from 'vscode';
 
 export default {
-	outputChannel: window.createOutputChannel("Extension API", "json"),
+	outputChannel: window.createOutputChannel('Extension API', 'json'),
 
 	clear(): void {
 		this.outputChannel.clear();
@@ -11,7 +11,7 @@ export default {
 		this.outputChannel.dispose();
 	},
 
-	log(input: unknown, key = ""): void {
+	log(input: unknown, key = ''): void {
 		this.clear();
 
 		if (input && key?.length) {

@@ -1,5 +1,5 @@
-import { extensions, window } from "vscode";
-import channel from "../channel";
+import { extensions, window } from 'vscode';
+import channel from '../channel';
 
 function mapExtensions() {
 	return extensions.all
@@ -27,9 +27,7 @@ export default {
 
 	async getExtension(): Promise<void> {
 		const extensions = mapExtensions();
-		const pick = await window.showQuickPick([
-			...extensions.map((item) => item.id),
-		]);
+		const pick = await window.showQuickPick([...extensions.map((item) => item.id)]);
 
 		if (pick) channel.log(extensions.filter((item) => item.id === pick)[0]);
 	},
