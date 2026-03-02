@@ -1,3 +1,7 @@
+# v0.3.0 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.3.0)
+
+- require `vscode>=1.98.0`
+
 # v0.2.5 [#](https://github.com/idleberg/vscode-extension-api/releases/tag/v0.2.5)
 
 - update tooling

@@ -48,7 +48,7 @@
 		"@eslint/js": "^8.56.0",
 		"@total-typescript/tsconfig": "^1.0.4",
 		"@types/node": "^20.11.19",
-		"@types/vscode": "^1.52.0",
+		"@types/vscode": "^1.98.0",
 		"@typescript-eslint/eslint-plugin": "^7.0.1",
 		"@typescript-eslint/parser": "^7.0.1",
 		"concurrently": "^9.1.2",
@@ -72,7 +72,7 @@
 		"theme": "light"
 	},
 	"engines": {
-		"vscode": "^1.52.0"
+		"vscode": "^1.98.0"
 	},
 	"activationEvents": [
 		"onStartupFinished"
