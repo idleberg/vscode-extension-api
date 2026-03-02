@@ -19,7 +19,7 @@ export default {
 
 		if (!pick) return;
 
-		const allCommands = await commands.getCommands(pick === 'all commands' ? false : true);
+		const allCommands = await commands.getCommands(pick !== 'all commands');
 
 		channel.log(allCommands.sort());
 	},
