@@ -1,5 +1,5 @@
 import { commands, type ExtensionContext } from 'vscode';
-import API from './api';
+import API from './api/index.ts';
 
 export async function activate(context: ExtensionContext): Promise<void> {
 	// Commands API

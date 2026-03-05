@@ -1,5 +1,5 @@
 import { l10n } from 'vscode';
-import channel from '../channel';
+import channel from '../channel.ts';
 
 export default {
 	bundle(): void {

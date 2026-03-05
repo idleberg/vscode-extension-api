@@ -1,5 +1,5 @@
 import { extensions, window } from 'vscode';
-import channel from '../channel';
+import channel from '../channel.ts';
 
 function mapExtensions() {
 	return extensions.all

@@ -1,5 +1,5 @@
 import { window } from 'vscode';
-import channel from '../channel';
+import channel from '../channel.ts';
 
 export default {
 	activeColorTheme(): void {

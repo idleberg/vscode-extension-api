@@ -1,6 +1,6 @@
 import dotProp from 'dot-prop';
 import { window, workspace } from 'vscode';
-import channel from '../channel';
+import channel from '../channel.ts';
 
 export default {
 	fs(): void {

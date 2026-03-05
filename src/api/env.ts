@@ -1,5 +1,5 @@
 import { env } from 'vscode';
-import channel from '../channel';
+import channel from '../channel.ts';
 
 export default {
 	_(): void {
