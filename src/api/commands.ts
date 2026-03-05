@@ -1,5 +1,5 @@
 import { commands, window } from 'vscode';
-import channel from '../channel';
+import channel from '../channel.ts';
 
 export default {
 	async executeCommand(): Promise<void> {

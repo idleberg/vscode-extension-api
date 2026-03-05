@@ -1,6 +1,6 @@
-import dotProp from 'dot-prop';
+import objectPath from 'object-path';
 import { window, workspace } from 'vscode';
-import channel from '../channel.ts';
+import channel from '../channel';
 
 export default {
 	fs(): void {
@@ -49,8 +49,8 @@ export default {
 
 		if (!pick) return;
 
-		if (dotProp.has(configuration, pick)) {
-			channel.log(dotProp.get(configuration, pick), pick.includes('.') ? pick : '');
+		if (objectPath.has(configuration, pick)) {
+			channel.log(objectPath.get(configuration, pick), pick.includes('.') ? pick : '');
 		} else {
 			channel.log(configuration);
 		}
