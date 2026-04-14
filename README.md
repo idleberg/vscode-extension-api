@@ -1,8 +1,7 @@
 # Extension API
 
+[![License](https://img.shields.io/github/license/idleberg/vscode-nsl-assembler?color=blue&style=for-the-badge)](LICENSE)
 [![Version](https://img.shields.io/github/v/release/idleberg/vscode-extension-api?style=for-the-badge)](https://github.com/idleberg/vscode-extension-api/releases)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/idleberg.extension-api?style=for-the-badge&label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=idleberg.extension-api)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/idleberg/extension-api?style=for-the-badge&label=Open%20VSX)](https://open-vsx.org/extension/idleberg/extension-api)
 [![Build](https://img.shields.io/github/actions/workflow/status/idleberg/vscode-extension-api/default.yml?style=for-the-badge)](https://github.com/idleberg/vscode-extension-api/actions)
 
 A simple helper aimed at extension developers. Logs Extension API results to the output channel.
@@ -74,4 +73,4 @@ Extension icon based on an [icon design](https://thenounproject.com/icon/extensi
 
 ## License
 
-This work is licensed under [The MIT License](https://opensource.org/licenses/MIT).
+This work is licensed under [The MIT License](LICENSE).
